@@ -2,12 +2,13 @@
 \input{Abstract}
 \pagenumbering{Roman}
 \setcounter{page}{1}
+\renewcommand{\contentsname}{Table of Contents}
 \tableofcontents
 \newpage
 \newpage\thispagestyle{empty}\hspace{1em}\newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\input{Introduction}
+\input{Einleitung}
 \newpage
 \newpage\thispagestyle{empty}\hspace{1em}\newpage
 \input{Grundlagen}
@@ -29,7 +30,7 @@
 \newpage\thispagestyle{empty}\hspace{1em}\newpage
 \input{Abkurzungen}
 %Abkürzungsverzeichnis im Inhaltsverzeichnis anzeigen
-\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis} 
+\addcontentsline{toc}{chapter}{List of Abbreviations} 
 %Abbildungsverzeichnis
 \newpage\thispagestyle{empty}\hspace{1em}\newpage
 \listoffigures
@@ -37,9 +38,9 @@
 \listoftables
 %Liste von Algorithmen
 \newpage\thispagestyle{empty}\hspace{1em}\newpage
-\markboth{Liste der Algorithmen}{Liste der Algorithmen}
+\markboth{List of Algorithms}{List of Algorithms}
 \phantomsection
-\addcontentsline{toc}{chapter}{Liste der Algorithmen}
+\addcontentsline{toc}{chapter}{List of Algorithms}
 \listofalgorithms
 %Liste von Code
 \newpage\thispagestyle{empty}\hspace{1em}\newpage
@@ -47,12 +48,5 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Listings}
 \lstlistoflistings
-%Anhang
-\newpage
-\newpage\thispagestyle{empty}\hspace{1em}\newpage
-\input{Anhang}
-%Danksagung
-\input{Danksagung}
-\addcontentsline{toc}{chapter}{Danksagung} 
 
 \end{document} 
