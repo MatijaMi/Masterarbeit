@@ -72,5 +72,25 @@ All in all, these properties and features make using Blueprints quite simple and
 
 \section{Networking}
 
-One trait that is specific to a Player Controller is that only one exists in the world of a user and only that user can access it. All the other users have no idea of any other controllers even existing. For any sort of interaction between them a server is needed, which has access to copies of all of the controllers. That 
-%check document, explain that for the plugin alone it isn't needed but for the viewer it is necesarry to understand, replications, rpcs,
+Everything that was discussed so far mostly relates to what happens in a single instance of our program. Nonetheless, as already mentioned, networking is a big part of Unreal Engine and is required to understand the steps that are needed in order to create a multi-user project.\\
+
+When the program runs in a standalone mode, all of the objects that make it up exist on the local machine which is running the program and only that machine. For a network multi-user program, Unreal Engine uses a so-called client server model. One computer acts as a server and hosts a session that can be joined by other user as clients. The server is what connects all of the different users and enables their communication with each other. The instance running on the server is the true, authoritative world instance. In order words this is where the multiplayer is actually happening. The clients only have copies of this world. The server dictates the clients what Actors exist, how they should behave and values their variables should have. The clients then use this information to approximate what is happening on the server in their own copy of the world. The clients only really control the Pawn and Player controller that they are assigned to. One thing to note is that while a copy of a Pawn exists in every instance of the program, the Player Controller only exists for the owning player and server. This means that a local Player Controller is completely unaware of the existence of other Player Controllers.\\
+
+In total there are three network modes in which an Unreal project can run in: standalone, client and server. For the server mode there is a further classification into listen and dedicated servers. A listen server represents a user hosting a session through their local machine. This means that they function both as a server and a client simultaneously. The benefit of this is its relative simplicity, especially with Unreals already existing tools and support for many popular online subsystems such as Google, Amazon and Steam. A big downside of this approach is the extra load that is put on the server machine, as it also has to handle user-relevant features like graphics. Also the user that hosts the server can get a slight advantage from the non-existent latency, although this is only relevant in specific use-case.\\
+A dedicated server on the other hand runs "headlessly", which means it does not have to render any visuals and isn't controlled by anyone locally. This means that most of the resources available to the machine can be used for hosting and moderating the program. Unfortunately this requires a separate computer with its own network connection, not to mention a lot of complex work to be properly configured.\\
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=1\textwidth]{fig/ListenvsDedicated.pdf}
+	\caption[Difference between Listen and Dedicated Server]{Example to demonstrate differences between a Listen and Dedicated server\protect}
+	\label{fig:ListenvDedicated}
+\end{figure}
+
+The actual information sharing and interaction between users through a server is done through replication and remote procedure calls. In order to use replication for a variable, its boolean specifier "Replicated" needs to be set to true. Now when the variable's value is changed on an authoritative Actor, usually on the server, the change is automatically sent to the connected remote copies of the Actor. Likewise if a variable is changed locally in a clients instance, this will not be replicated to the server or other clients. This doesn't mean that every variable needs to be replicated, as that could cause problems in network traffic. Rather it is important to use replication carefully and replicate only variables that require it.\\
+Remote procedure calls(RPCs) are functions which are called from a machine but executed remotely on another machine. They are also known as replicated functions. In order for a function to become an RPC, the keywords server, client or multicast need to be added to its definition. The server and client keywords simply mean that the function should be executed on specifically on the server or client. Multicast means that a function will be called on every instance of an object. Another peculiarity of RPCs is that they have no return value. In order to achieve that another RPC is needed which returns the output from the remote to the local machine.\\
+All of this is only a small section of all the features that Unreal Engine is capable of but for the purposes of this project this should suffice as an introduction to the engine and make understanding the rest of the work easier.
+
+
+
+
+% replications, rpcs,
