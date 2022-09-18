@@ -83,20 +83,25 @@ A group determines what faces are combined in order to make a component of the l
 	\label{tab:MTLTypes}
 \end{table}
 
-
 Due to all of this, these values need to be combined and saved in an array where every array entry represents one group. The group consists of the face values and marks where materials need to be switched.\\
-The only problem when it comes to OBJ is 
+The only major problem with OBJ is the fact that the coordinates don't have units, meaning they can't be scaled to properly represent the designed size. Instead everything is scaled with same factor so that at least the scales between objects made in the same scene stay the same. Also the created objects can later be scaled by users to better resemble the desired size.
 
 \subsubsection{STL}
-The STL format is
-% explain  histroy and why its still used and popular
-% explain that it is simpler than obj, doesn't support materials, only vertices and
-% is esencially just a list of trianlgs one after the other, an example of that can be seen in figure xyz
+STL is a file format native to the CAD software created by 3D Systems in 1987\cite{}. The format has gained a lot of support in many different software packages, especially for 3D printing software where it is one of the default formats. STL files only describe the surface geometry of a three-dimensional object with out any additional information about colours, materials or groups. The geometry is described in raw, unstructured triangles defined by a normal and 3 vertices. The way a triangle is defined in the file is shown in Figure \ref{fig:STLFormat}. 
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.35\textwidth]{fig/STLFormat.png}
+	\caption[STL Triangle facet]{A triangle facet represented in STL\protect}
+	\label{fig:STLFormat}
+\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While the structure suggests that multiple possibilities are possible for loops, the facets can only be triangles. In order to represent a full model the triangles are simply listed one after the other. In order to parse it, the vertices and normals are saved in arrays and faces are generated to point what vertices make up the triangles. This is important for generating the mesh later. While it is a simpler format compared to OBJ, it is excellent when only the shape is relevant. It does unfortunately suffer from the same scaling problems as OBJ and that is handled in the same way as well.\\
+Overall with these two formats the majority of the most common and well-known CAD formats are covered. Ideally more formats would be covered and specific parsers for every format would be written to get the most accurate results but for the limitations of this project, this is a very practical solution.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Runtime Mesh Generation}
+
 \subsection{Runtime Mesh Component}
-\subsection{Material Generation}
 \section{Object Interaction}\label{chp:ObjectInteraction}
 
 \subsection{Mouse and Keyboard}

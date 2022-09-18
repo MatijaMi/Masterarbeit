@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.9)  17 SEP 2022 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.9)  18 SEP 2022 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1000,7 +1000,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-<fig/UnrealEngineLevelEditor.png, id=145, 1440.88312pt x 784.43062pt>
+<fig/UnrealEngineLevelEditor.png, id=143, 1440.88312pt x 784.43062pt>
 File: fig/UnrealEngineLevelEditor.png Graphic file (type png)
 <use fig/UnrealEngineLevelEditor.png>
 Package pdftex.def Info: fig/UnrealEngineLevelEditor.png  used on input line 18
@@ -1034,7 +1034,7 @@ been already used, duplicate ignored
                    \relax 
 l.34 
       [7]
-<fig/UnrealCharacter.png, id=161, 761.09344pt x 460.72125pt>
+<fig/UnrealCharacter.png, id=159, 761.09344pt x 460.72125pt>
 File: fig/UnrealCharacter.png Graphic file (type png)
 <use fig/UnrealCharacter.png>
 Package pdftex.def Info: fig/UnrealCharacter.png  used on input line 37.
@@ -1045,7 +1045,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
  []
 
 [8 <./fig/UnrealCharacter.png>]
-<fig/ClassExample3.png, id=169, 785.93625pt x 399.74344pt>
+<fig/ClassExample3.png, id=167, 785.93625pt x 399.74344pt>
 File: fig/ClassExample3.png Graphic file (type png)
 <use fig/ClassExample3.png>
 Package pdftex.def Info: fig/ClassExample3.png  used on input line 52.
@@ -1056,7 +1056,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--57
  []
 
 [9 <./fig/ClassExample3.png>]
-<fig/BlueprintExample.png, id=176, 1135.24126pt x 567.62062pt>
+<fig/BlueprintExample.png, id=174, 1135.24126pt x 567.62062pt>
 File: fig/BlueprintExample.png Graphic file (type png)
 <use fig/BlueprintExample.png>
 Package pdftex.def Info: fig/BlueprintExample.png  used on input line 63.
@@ -1077,7 +1077,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
  []
 
 [11]
-<fig/ListenvsDedicated.pdf, id=187, 1251.05908pt x 402.19795pt>
+<fig/ListenvsDedicated.pdf, id=185, 1251.05908pt x 402.19795pt>
 File: fig/ListenvsDedicated.pdf Graphic file (type pdf)
 <use fig/ListenvsDedicated.pdf>
 Package pdftex.def Info: fig/ListenvsDedicated.pdf  used on input line 84.
@@ -1094,7 +1094,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-<fig/FilePicker2.png, id=227, 1436.36626pt x 757.32938pt>
+<fig/FilePicker2.png, id=225, 1436.36626pt x 757.32938pt>
 File: fig/FilePicker2.png Graphic file (type png)
 <use fig/FilePicker2.png>
 Package pdftex.def Info: fig/FilePicker2.png  used on input line 13.
@@ -1107,21 +1107,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 [14
 
 ] [15 <./fig/FilePicker2.png>] [16]
-<fig/TriangleFan.pdf, id=250, 464.18114pt x 468.23596pt>
+<fig/TriangleFan.pdf, id=248, 464.18114pt x 468.23596pt>
 File: fig/TriangleFan.pdf Graphic file (type pdf)
 <use fig/TriangleFan.pdf>
-Package pdftex.def Info: fig/TriangleFan.pdf  used on input line 64.
+Package pdftex.def Info: fig/TriangleFan.pdf  used on input line 61.
 (pdftex.def)             Requested size: 125.47794pt x 126.56828pt.
- [17 <./fig/TriangleFan.pdf>]) [18]
-[19] (Ergebnisse.tex
+ [17 <./fig/TriangleFan.pdf>]
+<fig/STLFormat.png, id=268, 405.76593pt x 204.01219pt>
+File: fig/STLFormat.png Graphic file (type png)
+<use fig/STLFormat.png>
+Package pdftex.def Info: fig/STLFormat.png  used on input line 93.
+(pdftex.def)             Requested size: 146.39198pt x 73.60309pt.
+ [18 <./fig/STLFormat.png>]) [19] [20] (Ergebnisse.tex
 chapter 4.
-) [20
+) [21
 
-] [21] (ZusammenfassungAusblick.tex
+] [22] (ZusammenfassungAusblick.tex
 chapter 5.
-) [22
+) [23
 
-] (main.bbl [23
+] (main.bbl [24
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 93--99
@@ -1159,232 +1164,232 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--131
 dering . htm$[]
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 171--177
 \OT1/cmr/m/n/10.95 hardware / prozessoren / 2008 / test[]intel[]core[]i7[]920[]
 940[]965[]extreme[]edition/$[]
  []
 
-) [25] [26] (Abkurzungen.tex
+) [26] [27] (Abkurzungen.tex
 
-LaTeX Warning: Hyper reference `acro:ALU' on page 27 undefined on input line 5.
-
-
-
-LaTeX Warning: Hyper reference `acro:ALU' on page 27 undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:ALU' on page 28 undefined on input line 5.
 
 
 
-LaTeX Warning: Hyper reference `acro:BTF' on page 27 undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:ALU' on page 28 undefined on input line 5.
 
 
 
-LaTeX Warning: Hyper reference `acro:BTF' on page 27 undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:BTF' on page 28 undefined on input line 6.
 
 
 
-LaTeX Warning: Hyper reference `acro:CPU' on page 27 undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:BTF' on page 28 undefined on input line 6.
 
 
 
-LaTeX Warning: Hyper reference `acro:CPU' on page 27 undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:CPU' on page 28 undefined on input line 7.
 
 
 
-LaTeX Warning: Hyper reference `acro:CU' on page 27 undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:CPU' on page 28 undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:CU' on page 27 undefined on input line 8.
+
+LaTeX Warning: Hyper reference `acro:CU' on page 28 undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:CUDA' on page 27 undefined on input line 9
+LaTeX Warning: Hyper reference `acro:CU' on page 28 undefined on input line 8.
+
+
+LaTeX Warning: Hyper reference `acro:CUDA' on page 28 undefined on input line 9
 .
 
 
-LaTeX Warning: Hyper reference `acro:CUDA' on page 27 undefined on input line 9
+LaTeX Warning: Hyper reference `acro:CUDA' on page 28 undefined on input line 9
 .
 
 
-LaTeX Warning: Hyper reference `acro:FLOPs' on page 27 undefined on input line 
+LaTeX Warning: Hyper reference `acro:FLOPs' on page 28 undefined on input line 
 10.
 
 
-LaTeX Warning: Hyper reference `acro:FLOPs' on page 27 undefined on input line 
+LaTeX Warning: Hyper reference `acro:FLOPs' on page 28 undefined on input line 
 10.
 
 
-LaTeX Warning: Hyper reference `acro:FPU' on page 27 undefined on input line 11
+LaTeX Warning: Hyper reference `acro:FPU' on page 28 undefined on input line 11
 .
 
 
-LaTeX Warning: Hyper reference `acro:FPU' on page 27 undefined on input line 11
+LaTeX Warning: Hyper reference `acro:FPU' on page 28 undefined on input line 11
 .
 
 
-LaTeX Warning: Hyper reference `acro:GPGPU' on page 27 undefined on input line 
+LaTeX Warning: Hyper reference `acro:GPGPU' on page 28 undefined on input line 
 12.
 
 
-LaTeX Warning: Hyper reference `acro:GPGPU' on page 27 undefined on input line 
+LaTeX Warning: Hyper reference `acro:GPGPU' on page 28 undefined on input line 
 12.
 
 
-LaTeX Warning: Hyper reference `acro:GPU' on page 27 undefined on input line 13
+LaTeX Warning: Hyper reference `acro:GPU' on page 28 undefined on input line 13
 .
 
 
-LaTeX Warning: Hyper reference `acro:GPU' on page 27 undefined on input line 13
+LaTeX Warning: Hyper reference `acro:GPU' on page 28 undefined on input line 13
 .
 
 
-LaTeX Warning: Hyper reference `acro:HLOD' on page 27 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:HLOD' on page 28 undefined on input line 1
 4.
 
 
-LaTeX Warning: Hyper reference `acro:HLOD' on page 27 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:HLOD' on page 28 undefined on input line 1
 4.
 
 
-LaTeX Warning: Hyper reference `acro:IFS' on page 27 undefined on input line 15
+LaTeX Warning: Hyper reference `acro:IFS' on page 28 undefined on input line 15
 .
 
 
-LaTeX Warning: Hyper reference `acro:IFS' on page 27 undefined on input line 15
+LaTeX Warning: Hyper reference `acro:IFS' on page 28 undefined on input line 15
 .
 
 
-LaTeX Warning: Hyper reference `acro:LOD' on page 27 undefined on input line 16
+LaTeX Warning: Hyper reference `acro:LOD' on page 28 undefined on input line 16
 .
 
 
-LaTeX Warning: Hyper reference `acro:LOD' on page 27 undefined on input line 16
+LaTeX Warning: Hyper reference `acro:LOD' on page 28 undefined on input line 16
 .
 
 
-LaTeX Warning: Hyper reference `acro:MIMD' on page 27 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:MIMD' on page 28 undefined on input line 1
 7.
 
 
-LaTeX Warning: Hyper reference `acro:MIMD' on page 27 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:MIMD' on page 28 undefined on input line 1
 7.
 
 
-LaTeX Warning: Hyper reference `acro:OpenCL' on page 27 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenCL' on page 28 undefined on input line
  18.
 
 
-LaTeX Warning: Hyper reference `acro:OpenCL' on page 27 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenCL' on page 28 undefined on input line
  18.
 
 
-LaTeX Warning: Hyper reference `acro:OpenGL' on page 27 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenGL' on page 28 undefined on input line
  19.
 
 
-LaTeX Warning: Hyper reference `acro:OpenGL' on page 27 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenGL' on page 28 undefined on input line
  19.
 
 
-LaTeX Warning: Hyper reference `acro:PCAM' on page 27 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:PCAM' on page 28 undefined on input line 2
 0.
 
 
-LaTeX Warning: Hyper reference `acro:PCAM' on page 27 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:PCAM' on page 28 undefined on input line 2
 0.
 
 
-LaTeX Warning: Hyper reference `acro:PM' on page 27 undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:PM' on page 28 undefined on input line 21.
 
 
 
-LaTeX Warning: Hyper reference `acro:PM' on page 27 undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:PM' on page 28 undefined on input line 21.
 
 
 
-LaTeX Warning: Hyper reference `acro:SFU' on page 27 undefined on input line 22
+LaTeX Warning: Hyper reference `acro:SFU' on page 28 undefined on input line 22
 .
 
 
-LaTeX Warning: Hyper reference `acro:SFU' on page 27 undefined on input line 22
+LaTeX Warning: Hyper reference `acro:SFU' on page 28 undefined on input line 22
 .
 
 
-LaTeX Warning: Hyper reference `acro:SIMD' on page 27 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMD' on page 28 undefined on input line 2
 3.
 
 
-LaTeX Warning: Hyper reference `acro:SIMD' on page 27 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMD' on page 28 undefined on input line 2
 3.
 
 
-LaTeX Warning: Hyper reference `acro:SIMT' on page 27 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMT' on page 28 undefined on input line 2
 4.
 
 
-LaTeX Warning: Hyper reference `acro:SIMT' on page 27 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMT' on page 28 undefined on input line 2
 4.
 
 
-LaTeX Warning: Hyper reference `acro:SLI' on page 27 undefined on input line 25
+LaTeX Warning: Hyper reference `acro:SLI' on page 28 undefined on input line 25
 .
 
 
-LaTeX Warning: Hyper reference `acro:SLI' on page 27 undefined on input line 25
+LaTeX Warning: Hyper reference `acro:SLI' on page 28 undefined on input line 25
 .
 
 
-LaTeX Warning: Hyper reference `acro:SP' on page 27 undefined on input line 26.
+LaTeX Warning: Hyper reference `acro:SP' on page 28 undefined on input line 26.
 
 
 
-LaTeX Warning: Hyper reference `acro:SP' on page 27 undefined on input line 26.
+LaTeX Warning: Hyper reference `acro:SP' on page 28 undefined on input line 26.
 
 
 
-LaTeX Warning: Hyper reference `acro:SM' on page 27 undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:SM' on page 28 undefined on input line 27.
 
 
 
-LaTeX Warning: Hyper reference `acro:SM' on page 27 undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:SM' on page 28 undefined on input line 27.
 
 
 
-LaTeX Warning: Hyper reference `acro:TPC' on page 27 undefined on input line 28
+LaTeX Warning: Hyper reference `acro:TPC' on page 28 undefined on input line 28
 .
 
 
-LaTeX Warning: Hyper reference `acro:TPC' on page 27 undefined on input line 28
+LaTeX Warning: Hyper reference `acro:TPC' on page 28 undefined on input line 28
 .
 
 
-LaTeX Warning: Hyper reference `acro:VBO' on page 27 undefined on input line 29
+LaTeX Warning: Hyper reference `acro:VBO' on page 28 undefined on input line 29
 .
 
 
-LaTeX Warning: Hyper reference `acro:VBO' on page 27 undefined on input line 29
+LaTeX Warning: Hyper reference `acro:VBO' on page 28 undefined on input line 29
 .
 
-) [27
+) [28
 
-] [28] (main.lof)
+] [29] (main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [29
+ [30
 
 ] (main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [30
+ [31
 
-] [31] (main.loa)
+] [32] (main.loa)
 \tf@loa=\write7
 \openout7 = `main.loa'.
 
- [32
+ [33
 
-] [33]
+] [34]
 
 Class scrreprt Warning: \float@listhead detected!
 (scrreprt)              Implementation of \float@listhead became
@@ -1402,7 +1407,7 @@ Class scrreprt Warning: \float@listhead detected!
 \tf@lol=\write8
 \openout8 = `main.lol'.
 
- [34
+ [35
 
 ] (main.aux)
 
@@ -1412,10 +1417,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 19426 strings out of 475389
- 364243 string characters out of 2776529
+ 19434 strings out of 475389
+ 364399 string characters out of 2776529
  964926 words of memory out of 3000000
- 40337 multiletter control sequences out of 15000+600000
+ 40343 multiletter control sequences out of 15000+600000
  477339 words of font info for 57 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  113i,19n,109p,10616b,658s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1429,9 +1434,9 @@ al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Matija/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
 /Matija/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb
 >
-Output written on main.pdf (45 pages, 2181321 bytes).
+Output written on main.pdf (46 pages, 2190533 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
- 289 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 600 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 
