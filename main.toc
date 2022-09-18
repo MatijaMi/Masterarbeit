@@ -22,18 +22,20 @@
 \contentsline {subsubsection}{\nonumberline Wavefront OBJ}{16}{subsubsection*.12}%
 \contentsline {subsubsection}{\nonumberline STL}{18}{subsubsection*.14}%
 \contentsline {section}{\numberline {3.2}Runtime Mesh Generation}{19}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Runtime Mesh Component}{19}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Object Interaction}{19}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Mouse and Keyboard}{19}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Virtual Reality}{19}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Results and Evaluation}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}CAD Runtime Loader}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Comparison to Related Works}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{21}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusion}{23}{chapter.5}%
-\contentsline {chapter}{Bibliography}{24}{chapter*.15}%
-\contentsline {chapter}{List of Abbreviations}{28}{chapter*.16}%
-\contentsline {chapter}{List of Figures}{30}{chapter*.17}%
-\contentsline {chapter}{List of Tables}{31}{chapter*.18}%
-\contentsline {chapter}{List of Algorithms}{33}{section*.19}%
-\contentsline {chapter}{Listings}{35}{section*.21}%
+\contentsline {subsubsection}{\nonumberline Generating a CAD Model}{19}{subsubsection*.16}%
+\contentsline {section}{\numberline {3.3}Object Interaction}{20}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Grabbing and Translating}{20}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Grabbing Individual Components}{20}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Scaling and Rotating}{20}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Duplication, Expansion and Deletion}{20}{subsection.3.3.4}%
+\contentsline {chapter}{\numberline {4}Results and Evaluation}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}CAD Runtime Loader}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Comparison to Related Works}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{22}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusion}{24}{chapter.5}%
+\contentsline {chapter}{Bibliography}{25}{chapter*.17}%
+\contentsline {chapter}{List of Abbreviations}{29}{chapter*.18}%
+\contentsline {chapter}{List of Figures}{31}{chapter*.19}%
+\contentsline {chapter}{List of Tables}{32}{chapter*.20}%
+\contentsline {chapter}{List of Algorithms}{34}{section*.21}%
+\contentsline {chapter}{Listings}{36}{section*.23}%

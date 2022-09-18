@@ -1,0 +1,12 @@
+facet normal xn yn zn
+	outerloop
+		vertex x1 y1 z1
+		vertex x2 y2 z2
+		vertex x3 y3 z3
+	endloop
+endfacet
+
+
+
+
+
