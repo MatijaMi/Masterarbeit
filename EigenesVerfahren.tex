@@ -63,7 +63,7 @@ Faces, materials and group are more complicated as they define how the rest of t
 	\label{fig:TriangleFan}
 \end{figure}
 
-A group determines what faces are combined in order to make a component of the larger object. The "usemtl" tags tells what material should be used on the faces and that material is used until the next tag appears. The actual materials are defined in an MTL file, which works similarly to an OBJ, just with different tags and values. Some of the more important entries can be seen in Table \ref{tab:MTLTypes}. This MTL file of course also needs to be shared to every client. The values themselves are saved in a 2D array where every row defines one material and every column a specific value. 
+A group determines what faces are combined in order to make a component of the larger object. The "usemtl" tags tells what material should be used on the faces and that material is used until the next tag appears. The actual materials are defined in an MTL file, which works similarly to an OBJ, just with different tags and values. Some of the more important entries can be seen in Table \ref{tab:MTLTypes}. This MTL file of course also needs to be shared to every client. The values themselves are saved in a Map where the keys are the material names and the values are arrays of the values.
 
 \begin{table}[htbp]
 	\centering 
@@ -71,10 +71,10 @@ A group determines what faces are combined in order to make a component of the l
 		\begin{tabular}{lll}
 			\toprule \textbf{Tag} & \textbf{Example Value} & \textbf{Definition} \\
 			\bottomrule
-			newmtl & White & Defines a new Material\\
+			newmtl & Stone & Defines the name of a new Material\\
 			Ka & 1.0 1.0 1.0 & Ambient colour\\
 			Kd & 0.0 0.0 0.0 &  Diffuse Colour\\
-			Ks & 1.0 1.0 1.0& Specular Colour\\
+			Ns & 1.0 & Specular Exponent\\
 			d & 0.5 & Transparency\\
 			
 			\bottomrule
@@ -121,12 +121,46 @@ But the demand for such a functionality has existed for a lot longer and Unreal'
 Before a model can be generated, there needs to be an Actor to which the components can be attached to. Technically this could be any Actor, even the Player Character, but it makes more sense to create a specific Actor for these purposes. In the plug-in such an Actor is defined in the CRIObject Blueprint class. Actors of this class are also going to be where the values from the parsed files will be stored, as well as the Actors that call the function to generate the new components on themselves.\\
 In order to spawn in a new Actor of this class, the Unreal SpawnActor function can be used. This function just needs to know what class should be spawned and where. The first parameter is easy but the second one has a few more options. Depending on what is needed all these Actors could be spawned in the same place or a user could enter the coordinates. For the purposes of CRP it was decided that the location of the new Actor is going to be where the user adding the object is looking. For this the users camera rotation is taken as a forward vector, multiplied by a distance and added to the players location. The distance is based on the size of the spawned object so that collision is avoided but it also isn't spawned to far from the user. Also this spawning process happens as soon as clients start downloading the CAD files so that once the files are parsed, there is a place to save the data. The Actors will be in the world but won't be visible or interactive as they don't have any components yet.\\
 Once the data has been saved, flags in the Actor get set in order to notify it that generating can begin. This is done because there is no guarantee that the CAD and material file will be downloaded in any specific order and generating before all the needed data is there would cause problems. The material flag is also only used if the file uses it and the user specified that it should be created with materials.\\
+The whole model isn't generated all at once because this could cause the program to stutter or freeze for the duration of the process for larger files. This happens due to this running on the same thread as the main thread, which means that nothing is rendered until this is finished. Instead each component gets generated separately from the rest in the order that they are defined in the file. This is realized through the tick event that Actors can possess. A tick event is simply an event that gets called every frame or in some other interval. As the components themselves are comparatively small, generating one doesn't cause a significant performance hit that could freeze the main thread. So basically by doing this, the performance cost of generating the model gets spread across every component and becomes practically negligible. Another benefit of this is the fact that the components themself start appearing one after the other in the world, creating an interesting-looking animation. Ideally multithreading would be used for even better results but Unreal is rather specific about that due to its built-in garbage collection\cite{}.\\
+With every tick the GenerateMeshComponent function is called and a counter is kept as to know what components have already been dealt with. The function is implemented in C++ as the performance is necessary but in order to call it from Blueprints it was implemented in a Blueprint Function library, just like the file reading function. It could also have been implemented as a native function of the CRIObject class but, as this is supposed to function as a plug-in, it didn't make sense to limit it to one specific class. This way the functionality can be used in more ways depending on what the user needs. One such way is implemented in CRP and will be demonstrated later.\\
+How the function works can be seen in Algorithm \ref{algo:MeshGeneration} which shows the process in a simplified pseudocode.
+
+\begin{algorithm}[htpb]
+	\texttt{Input} $Actor, ComponentIndex, Vertices, TextCoords, Normals, \linebreak \null \quad\quad \quad ComponentData, Materials, UseCollision;$\\
+	$RMC = new \: CustomRuntimeMeshComponent()$\\
+	$RMC.ID = ComponentIndex$\\
+	$RMC.AttachTo(Actor)$\\
+	$Secitons = GetComponentSections(ComponentData)$\\
+	$SectionMaterials = GetSectionMaterials(Materials)$\\
+	$Center = FindBoundingBoxMiddle()$\\
+	$RMC.SetRelativeLocation(Center)$\\
+	$Vertices.Translate(-Center)$\\
+	$RMC.CenterVertex = Center$\\
+	\texttt{for} $i := 0$ \texttt{to} $Sections.Length$ ~\texttt{do}\\
+	\hspace{5mm} $Faces = GetFacesFromSection(Sections[i])$\\
+	\hspace{5mm} $Material = SetupSectionMaterial(ComponentMaterials[i])$\\
+	\hspace{5mm} $RMC.UseCollision = UseCollision$\\
+	\hspace{5mm} $RMC.CreateSection(i, Vertices, Faces, Normals, TexCoords, Material)\newline$\\
+	
+	\caption{Pseudocode for generating a Mesh Component}
+	\label{algo:MeshGeneration}
+\end{algorithm}
+
+As can be seen the function takes quite a few inputs but all of those necessary. The first step is instancing a new Runtime Mesh Component object. In this case it is a slightly customized subclass of RMC that contains a few more variables that can be quite useful. One of those being the index of component, which is used when interacting with components. After that the component is attached to the Actor generating it. Next the component is split into sections. RMC itself is designed to be able to further split a component into sections. In this case the component is split according to the materials used. That data then needs to be extracted from the component data. 
 
 
 
 
 
 
+Once the whole generating process is done, the model will appear in the world in the position where the Actor was spawned. The result of such a process can be seen in Figure \ref{fig:LoadedModel}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{fig/LoadedModel.png}
+	\caption[Loaded CAD Model in Unreal Engine]{Loaded CAD Model in Unreal Engine\protect}
+	\label{fig:LoadedModel}
+\end{figure}
 
 
 
