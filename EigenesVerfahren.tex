@@ -83,7 +83,7 @@ A group determines what faces are combined in order to make a component of the l
 	\label{tab:MTLTypes}
 \end{table}
 
-As the information of these values heavily relies on each other, they needed to be combined and saved in an array where every array entry represents one group. The group consists of the face values and marks where materials need to be switched.\\
+As the information of these values heavily relies on each other, they needed to be combined and saved in an array where every array entry represents one component of the whole object. The entry consists of the face values and marks where materials need to be switched.\\
 The only major problem with OBJ is the fact that the coordinates don't have units, meaning they can't be scaled to properly represent the designed size. Instead everything is scaled with same factor so that at least the scales between objects made in the same scene stay the same. Also the created objects can later be scaled by users to better resemble the desired size.
 
 \subsubsection{STL}
@@ -112,8 +112,23 @@ But the demand for such a functionality has existed for a lot longer and Unreal'
 
 \subsubsection{Generating a CAD Model}
 
-Before a model can be inserted at
-The first step to inserting a model into a scene at runtime is spawning in an Actor to which the newly generated components can be attached to. Spawning in an Actor is quite simple, a Blueprint function for that is built into Unreal already. The only two parameters that are required is the class of the Actor and the location where it should be spawned.
+% setiing up the class
+%generating componenet individually through function sections
+%attaching it and making it part of the actor
+%setting it's relative position and setting the components 
+%sections differ based on material as only one material per section is allowed
+% creating the materials
+Before a model can be generated, there needs to be an Actor to which the components can be attached to. Technically this could be any Actor, even the Player Character, but it makes more sense to create a specific Actor for these purposes. In the plug-in such an Actor is defined in the CRIObject Blueprint class. Actors of this class are also going to be where the values from the parsed files will be stored, as well as the Actors that call the function to generate the new components on themselves.\\
+In order to spawn in a new Actor of this class, the Unreal SpawnActor function can be used. This function just needs to know what class should be spawned and where. The first parameter is easy but the second one has a few more options. Depending on what is needed all these Actors could be spawned in the same place or a user could enter the coordinates. For the purposes of CRP it was decided that the location of the new Actor is going to be where the user adding the object is looking. For this the users camera rotation is taken as a forward vector, multiplied by a distance and added to the players location. The distance is based on the size of the spawned object so that collision is avoided but it also isn't spawned to far from the user. Also this spawning process happens as soon as clients start downloading the CAD files so that once the files are parsed, there is a place to save the data. The Actors will be in the world but won't be visible or interactive as they don't have any components yet.\\
+Once the data has been saved, flags in the Actor get set in order to notify it that generating can begin. This is done because there is no guarantee that the CAD and material file will be downloaded in any specific order and generating before all the needed data is there would cause problems. The material flag is also only used if the file uses it and the user specified that it should be created with materials.\\
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

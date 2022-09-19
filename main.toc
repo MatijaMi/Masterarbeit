@@ -25,17 +25,17 @@
 \contentsline {subsubsection}{\nonumberline Generating a CAD Model}{21}{subsubsection*.16}%
 \contentsline {section}{\numberline {3.3}Object Interaction}{21}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Grabbing and Translating}{21}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Grabbing Individual Components}{21}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Scaling and Rotating}{21}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Duplication, Expansion and Deletion}{21}{subsection.3.3.4}%
-\contentsline {chapter}{\numberline {4}Results and Evaluation}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}CAD Runtime Loader}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Comparison to Related Works}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{23}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusion}{25}{chapter.5}%
-\contentsline {chapter}{Bibliography}{26}{chapter*.17}%
-\contentsline {chapter}{List of Abbreviations}{30}{chapter*.18}%
-\contentsline {chapter}{List of Figures}{32}{chapter*.19}%
-\contentsline {chapter}{List of Tables}{33}{chapter*.20}%
-\contentsline {chapter}{List of Algorithms}{35}{section*.21}%
-\contentsline {chapter}{Listings}{37}{section*.23}%
+\contentsline {subsection}{\numberline {3.3.2}Grabbing Individual Components}{22}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Scaling and Rotating}{22}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Duplication, Expansion and Deletion}{22}{subsection.3.3.4}%
+\contentsline {chapter}{\numberline {4}Results and Evaluation}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}CAD Runtime Loader}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Comparison to Related Works}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{24}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusion}{26}{chapter.5}%
+\contentsline {chapter}{Bibliography}{27}{chapter*.17}%
+\contentsline {chapter}{List of Abbreviations}{31}{chapter*.18}%
+\contentsline {chapter}{List of Figures}{33}{chapter*.19}%
+\contentsline {chapter}{List of Tables}{34}{chapter*.20}%
+\contentsline {chapter}{List of Algorithms}{36}{section*.21}%
+\contentsline {chapter}{Listings}{38}{section*.23}%
