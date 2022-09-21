@@ -160,26 +160,65 @@ Finally the RMC takes all of the inputs that it needs and creates a section. Thi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Object Interaction}\label{chp:ObjectInteraction}
-While being able to generate 3D models on its own is very useful, it would be severely limited if it just stood in a place and the users had no way of doing anything with it. That is why it is important to take a look at how it possible to interact with these objects. There are many ways in which this can be done so the presented solutions are just what was implemented in CRP to demonstrate some of the more essential interactions that can probably find use in most projects.
-Most of the interaction was written in the Player Controller, while movement and looking around is handled in the Pawns. This was done because the Pawns have to be different in desktop and VR mode and that would mean writing pretty much the same code in two. Instead by having one Controller class and checking what mode is used, makes for much cleaner code and a more unified experience between the two modes.
+While being able to generate 3D models on its own is very useful, it would be severely limited if it just stood in a place and the users had no way of doing anything with it. That is why it is important to take a look at how it possible to interact with these objects. There are many ways in which this can be done so the presented solutions are just what was implemented in CRP to demonstrate some essential and some interesting interactions that can probably find use in most projects.\\
+Almost all the interaction was written in the Player Controller, while movement and looking around is handled in the Pawns. This was done because the Pawns have to be different in desktop and VR mode and that would mean writing pretty much the same code in two. Instead by having one Controller class and checking what mode is used, makes for much cleaner code and a more unified experience between the two modes.
 \subsection{Grabbing and Translating}
 
-One of the most basic but also important interactions a user can have with an object is grabbing and moving it around in the world. This is triggered when the user presses the grab button and stays as long as that button is held. Depending on the mode, this button is either the left mouse button or a trigger on a VR controller. When the button is pressed an RPC is called onto the server, where all of the interactions happen, that checks if the user is currently pointing at an object. 
+One of the most basic but also important interactions a user can have with an object is grabbing and moving it around in the world. This is triggered when the user presses the grab button and stays as long as that button is held. Depending on the mode, this button is either the left mouse button or a trigger on a VR controller. When the button is pressed an RPC is called onto the server, where all of the interactions happen. This RPC creates traces a line in the direction that the user is pointing at and checks if any objects get hit by this line. The pointing direction for desktop is where the user is currently looking at, marked for the user as a circular crosshair in the UI. For VR it's simply where the controller, whose trigger was pressed, is pointing at. What this looks like in Blueprints is shown in Figure \ref{fig:LineTracing}.
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.8\textwidth]{fig/LineTracing.png}
+	\includegraphics[width=0.8\textwidth]{fig/LineTracing2.png}
 	\caption[Tracing Grabs in Blueprints]{Tracing Grabs in Blueprints\protect}
 	\label{fig:LineTracing}
 \end{figure}
-\subsection{Grabbing Individual Components}
 
-As already mentioned, the model generally consists of many smaller components and while it is great to be able to interact with it as a whole, it could be a lot more useful if a user could choose to interact with every component individually.
-%hovering
+In case there was a hit, a result is created which contains which Actor and Component were hit and where. It is then checked that the correct class of Actor was hit and that the Actor isn't already being grabbed. If these checks are passed, a flag on the Actor is set to let other users knows that it is currently being grabbed. While this is the case, the Actor will be moved to where the user is pointing at the distance that the Actor had when it was grabbed. This location is additionally slightly offset by the position where it was grabbed. If this isn't wasn't done, once the Actor got grabbed it would instantly move so that the middle of it was where the user is pointing, causing a rather weird looking effect. Instead the location where the hit occurred is taken, transformed to the local coordinate system of the Actor and used as an offset when moving. This way it looks like the user is grabbing the Actor by the part where they intended to. While grabbing, the Actor they can also increase and decrease the distance to the Actor as well as rotate it around its z-axis. This is either done through the mouse wheel and two keys on the keyboard or through the stick on the VR controller. As this all is happening on the server and the Actors movement is replicated, it will also be moved in every instance. Once the grab button is released, another RPC is called that changes the flag on the Actor and ends the grab. Overall this creates a very intuitive way of grabbing.
 
 \subsection{Scaling and Rotating}
 
-\subsection{Duplication, Expansion and Deletion}
+\begin{wrapfigure}{R}{0.39\textwidth}
+	\centering
+	\includegraphics[width=0.30\textwidth]{fig/InteractionMenu2.png}
+	\caption[Interaction Menu instead of UI Editor]{Interaction Menu}
+	\label{fig:InteractionMenu}
+\end{wrapfigure}
+
+The next ways of interacting after translation are logically scaling and rotation. For these, and the rest of the interactions, a small menu was created for the user-interface which makes these functionalities available. This interaction menu can be seen in Figure \ref{fig:InteractionMenu}. It appears when a user presses the right mouse button or secondary trigger on a VR controller while pointing at an Actor. On a desktop window the menu is located on the right side and is used with a cursor. This cursor captures the mouse movement while the menu is open so that the users view doesn't move along with it. In VR the menu appears above the other VR controller and is used with the initial controller.\\
+The scaling and rotation are done through sliders and the input fields next to them. After one of the values is changed, an RPC gets called that tells the server to rotate or scale the selected Actor the desired amount. This then automatically gets replicated to the other clients.
+
+\subsection{Duplication, Expansion, Resetting and Deletion}
+
+Duplication, as the name says, creates a duplicate of the selected Actor. There are a lot of cases when multiple instances of an Actor are required and instead of having to open the same file for each of those times, it can be done with the click of a button. This uses the fact that the original Actor contains the necessary data so no further file sharing is needed to create a new one. The new object doesn't contain the data, in order to save on memory. Instead it has a reference to the original so that in case it also gets duplicate, it can point to the necessary data.\\
+Expansion aims to give the user a better look at the individual components and how they make up the whole Actor. This is done by translating the relative positions of the components in the direction of their centre. By doing this, the components remain in the relative areas they are supposed to be while creating enough space to differentiate between them.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{fig/ExpanedActor.png}
+	\caption[Example for an expanded Actor]{Example for an expanded Actor\protect}
+	\label{fig:ExpanedActor}
+\end{figure}
+
+Resetting is done to undo any sort of changes done to the Actor and put in back into the state it was when it was generated. This means the scaling for every component is set to 1, rotation set to (0,0,0) and relative location to the centre location saved in the components themself.\\
+If objects can be added during runtime, they should also the option to remove them. Compared to creating, deleting is a lot simpler as Unreal already has functions for that. When deleting an Actor it is also checked if that is the original instance of it and if there are copies of it in the world. If that is the case, the variables are transferred to a copy and the references for all the copies are updated.\\
+
+\subsection{Interacting with Individual Components}
+
+While being able to interact with it the Actor as a whole is already useful, a lot more could be achieved if users could interact with every component individually. For that a separate mode can be toggled with the press of a button. This mode uses the fact that the hit of a line trace also returns what component was hit to determine the component to interact with. But for the user it might now always be clear which component is which. So while the user is in this mode the component currently being pointed is highlighted. This effect is achieved through changing the material on the component with a dynamic material instance and changing it back to it's usual material once it isn't being targeted any more.The result of this can be seen in Figure \ref{fig:ComponentHighlight}.\\
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{fig/ComponentHighlight.png}
+	\caption[Highlighting a Component in CRP]{Highlighting a Component in CRP\protect}
+	\label{fig:ComponentHighlight}
+\end{figure}
+
+With this component the user can interact in almost all of the same ways they could with an Actor. Only expansion and duplication are not supported. The first one due to it requiring multiple components and the other one in order to avoid having two identical components attached to the same Actor.\\
+When it comes to translating the component a special feature is implemented. Even though the component can be moved out of it's initial space, it is still part of the Actor so if the Actor were to move, so would the component. Unreal does offer the ability to turn this off through a function called DetachFromComponent. While it may seem that the component now would be independent of the Actor, this is not the case. It purely means that the Component isn't moved along the Actor. Meaning if the Actor were to be delete, the Component would be gone as well. Truly detaching and reattaching a Component is very finicky and not recommended. Instead, the developed mesh generating functionality can be used to solve this problem. The component is simply replaced by a new copy of it that is attached to a different Actor. For this Actor a specific class was made that is designed to hold exactly one Component. This class can call upon the Generate Mesh Function, as that is a Blueprint Function Library, and generate the specific component needed by using the index saved in the original. This is done once the component is released from being grabbed. The original component is moved away, turned invisible and has its collisions turned off. From the users perspective it doesn't actually look like anything happened but they now have an instance of that component that can exist completely separately from the original Actor. The user can interact with this newly generated component in all the ways they usually could. Important to note is that when the reset function is used here, the component actually deletes itself and return the original to the way and position it is supposed to be. For the user this just looks like the component was placed back where it was.\\
+Overall this suite of interactions demonstrates the main ways of interaction and some additional ones are possible with the newly generated objects. There are definitely countless many more that could be implemented but for the purposes of this prototype, this is quite sufficient. 
+
+
+
 
 
 
