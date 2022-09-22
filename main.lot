@@ -7,4 +7,6 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces ObjTypes}}{17}{table.3.1}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces MTL Types}}{18}{table.3.2}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Time needed to generate object from file in seconds}}{30}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Average frame rate per number of loaded Models}}{31}{table.4.2}%
 \addvspace {10\p@ }

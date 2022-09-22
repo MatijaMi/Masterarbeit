@@ -9,19 +9,56 @@ The presenter is a standalone program which can be used to load and interact wit
 \section{Performance and Comparison to Related Works}
 
 All of those features are great but would mean little if the plug-in didn't perform well. In order to evaluate that, it was compared to the two best options currently available, Datasmith Runtime and glTFRuntime. Datasmith Runtime, as mentioned before, is Unreal's official plug-in for CAD runtime importing. It is still quite new, as it was released in August 2021 and is still in beta. On the other hand, glTFRuntime is an unofficial plug-in that has been in development for around two years and focuses purely on the import of glTF files.\\
-In order to truly test these programs it was decided to use a rather large model, containing around 3 million vertices and 6 million faces. Tests with smaller objects were also done but they didn't have enough of an impact on any of the options to create meaningful results. First it was tested how long it took each plug-in to load in the model, in order to compare the speeds of the generating approaches. Then the frame rate of the project was tested to see how well it performed with one of these objects loaded in. This was then also repeated with multiple copies of the same object to see if the way the meshes were generated caused any differences. As a baseline for this, the same tests were done but with the model being added through the editor and placed in the scene before runtime. This way, it can be seen how much of the performance is simply caused by Unreal and how much by the runtime generation. All of these tests were run in the same Unreal project on a computer using a Ryzen 5 1500x processor, RX 470 graphics card and 16 gigabytes of RAM. This is definitely not the strongest machine but that should make it easier to see how well optimized the solutions are. The only difference between the tests is the file format used for them. For CRI an OBJ file was used, while for the rest this OBJ was converted to glTF. The converting was done with multiple programs and the best performing file was chosen. This was done in order to mitigate possible inefficiencies cause by converters. The OBJ and glTF files do contain the same amount of vertices and faces so it shouldn't cause too much of a problem, perhaps only when it comes to parsing the files.
+In order to truly test these programs it was decided to use a rather large model, containing around 3 million vertices and 6 million faces. Tests with smaller objects were also done but they didn't have enough of an impact on any of the options to create meaningful results. First it was tested how long it took each plug-in to load in the model, in order to compare the speeds of the generating approaches. Then the frame rate of the project was tested to see how well it performed with one of these objects loaded in. This was then also repeated with multiple copies of the same object to see if the way the meshes were generated caused any differences. As a baseline for this, the same tests were done but with the model being added to the editor through regular Datasmith and placed in the scene before runtime. This way, it can be seen how much of the performance is simply caused by Unreal and how much by the runtime generation. All of these tests were run in the same Unreal project on a computer using a Ryzen 5 1500x processor, RX 470 graphics card and 16 gigabytes of RAM. This is definitely not the strongest machine but that should make it easier to see how well optimized the solutions are. The only difference between the tests is the file format used for them. For CRI an OBJ file was used, while for the rest this OBJ was converted to glTF. The converting was done with multiple programs and the best performing file was chosen. This was done in order to mitigate possible inefficiencies cause by converters. The OBJ and glTF files do contain the same amount of vertices and faces so it shouldn't cause too much of a problem, perhaps only when it comes to parsing the files. The results of the loading time tests can be seen in Table \ref{tab:TimeResults}, where the times shows that average of 5 loads in seconds. For the performance test, Table \ref{tab:TimeResults} shows the average frames per second after a certain amount of copies of the large object were created with each program.\\
 
 
-%maximum amount of vertices and faces
-% compare between the three
+\begin{table}[htbp]
+	\centering 
+	\scalebox{0.889}{
+		\begin{tabular}{|l|c|}
+			\hline
+			\textbf{Program} & \textbf{Time (s)}\\
+			\hline
+			Editor & 150,11\\
+			\hline
+			Datasmith & 131,62 \\
+			\hline
+			CRI & 35,48 \\
+			\hline
+			glTFRuntime & 41,37 \\
+			\hline
+	\end{tabular}}
+	\caption[Time needed to generate object from file in seconds]{Time needed to generate object from file in seconds}
+	\label{tab:TimeResults}
+\end{table}
+
+\begin{table}[htbp]
+	\centering 
+	\scalebox{0.889}{
+		\begin{tabular}{|l|c|c|c|c|c|}
+			\hline
+			 \textbf{Program} & \textbf{1 Model} & \textbf{2 Models} & \textbf{3 Models} & \textbf{4 Models} & \textbf{5 Models} \\
+			\hline
+			Editor & 88 & 59 & 39  & 30  & 25 \\
+			 \hline
+			Datasmith & 76 & 48 & 33  & 22  & 17\\
+			 \hline
+			 CRI & 75 & 50 & 35  & 28  & 23 \\
+			 \hline
+			glTFRuntime & 54 &  30 & 21 & 17  & 7 \\
+			 \hline
+	\end{tabular}}
+	\caption[Average frame rate per number of loaded Models]{Average frame rate per number of loaded Models}
+	\label{tab:TestResults}
+\end{table}
+
+While the times show that CRI is technically the fastest there are some things that need to be considered. First of all loading in the file to the editor is a slightly different operation than just loading a mesh. It needs to create the appropriate assets and files so that Unreal can work with this new object. Also once that is done, adding the new object to a scene can be done multiple times and very quickly. Something quite similar can also be seen with Datasmith. The loading also takes quite long, probably because the internal workings are quite similar. This can be further seen when trying to load the same file again because the new instances appears within seconds. This is definitely an optimization on Datasmith's part but it's not quite clear if it just copies the object or has some sort of asset which is used to create new instances. This is mostly speculation but it would explain why these two have such similar times and make sense considering they are part of the same software.\\
+Lastly it can be seen that is CRI is slightly faster than glTFRuntime but not by much. The difference could be due to the different file formats. This does at least prove that the times for Datasmith and the Editor aren't high only due to the format but because of what is happening under the hood. So overall CRI is definitely fast enough but would be slightly worse than some when it comes to creating multiple instances.\\
+
+When it comes to performance once the models are loaded in, it is clear that doing it in runtime has a noticeable performance impact. One of the reasons for this could definitely be increased RAM usage which was seen when creating meshes in runtime. It varied quite a bit from run to run but was consistently higher than when the models were part of the scene. Out of all the options, glTFRuntime fared the worst. It isn't quite clear why, but it probably has something  to do with the way their meshes are generated. It is still an incredible tool that has many interesting features tuned to glTF files, it just doesn't handle many vertices as well. On the other hand CRI and Datasmith are within margin of error between each other. Further tests were done with different files but the this behaviour stayed the same. CRI does interestingly handle multiple objects ever so slightly better but at that point the frame rate isn't really usable any more. It is nonetheless impressive that Unreal and these plug-ins can handle more than 15 million vertices and 30 million faces created during runtime without crashing. 
 
 \section{Shortcomings and Possible Improvements}
-%formats
 
-%textures
-
-% time limitations and needed experience , research and experimentation
-
-% dedicated server
-
-% big file handling + variables
+Overall the biggest drawback for the plug-in are definitely the supported formats. While OBJ and STL allow it to support many formats indirectly, their properties do limit some features, such as scale and PBR materials, from being completely realized. In order to fix this simply more parser for more formats would need to be written. This isn't generally too difficult to do as long as the formats are well documented, but it can take some time to write a good, efficient parser. Unfortunately there just wasn't enough time for that, as a lot of time went into learning and understanding how Unreal Engine works. Similarly quite a bit of time was spent experimenting with different approaches for achieving the best results that could viably be implemented. This is also partly the reason why currently textures aren't supported. The main reasons were the fact that a lot of CAD formats omit that information and that there are already proven ways of doing this in runtime\cite{} \cite{}. If development of this plug-in were to continue, these are definitely the features that would be added first.\\
+When it comes to the presenter, the biggest problem is the reliance on the Steam online subsystem. While it is incredibly handy for small projects and experimenting, for the areas where this would potentially be used this isn't adequate. Ideally a dedicated server should be used as it wouldn't have to graphically render the newly generated objects causing less strain on it and the connected users. But creating such a server is very tedious as it means the project would have to be written in the source version of Unreal Engine. For that the whole source code of Unreal has to be downloaded and built which can easily take up more than 150 gigabytes of hard disk space. And that is just for the ability to make a project which can be packaged as a server.\\ 
+Another problem that could arise can be found in file sharing. With small files the current approach works quite well but that is not the case with big files. Having to download quite large files can simply take a while and that definitely makes the user-experience a lot worse. Instead, if the files were available locally to every client and there was a way for every client to find the it once it was chosen by a different user, there wouldn't have to be any waiting. This would require a bit of preparation beforehand but it would still be better than having to share new versions of a program in order to add objects.\\
