@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.9)  21 SEP 2022 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.9)  22 SEP 2022 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1178,13 +1178,13 @@ Package pdftex.def Info: fig/ComponentHighlight.png  used on input line 211.
 [26 <./fig/ExpanedActor.png>]) [27 <./fig/ComponentHighlight.png>] [28]
 (Ergebnisse.tex
 chapter 4.
-) [29
+[29
 
-] [30] (ZusammenfassungAusblick.tex
+]) [30] [31] (ZusammenfassungAusblick.tex
 chapter 5.
-) [31
+) [32
 
-] (main.bbl [32
+] (main.bbl [33
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 93--99
@@ -1222,232 +1222,232 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--131
 dering . htm$[]
  []
 
-[33]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 171--177
 \OT1/cmr/m/n/10.95 hardware / prozessoren / 2008 / test[]intel[]core[]i7[]920[]
 940[]965[]extreme[]edition/$[]
  []
 
-) [34] [35] (Abkurzungen.tex
+) [35] [36] (Abkurzungen.tex
 
-LaTeX Warning: Hyper reference `acro:ALU' on page 36 undefined on input line 5.
-
-
-
-LaTeX Warning: Hyper reference `acro:ALU' on page 36 undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:ALU' on page 37 undefined on input line 5.
 
 
 
-LaTeX Warning: Hyper reference `acro:BTF' on page 36 undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:ALU' on page 37 undefined on input line 5.
 
 
 
-LaTeX Warning: Hyper reference `acro:BTF' on page 36 undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:BTF' on page 37 undefined on input line 6.
 
 
 
-LaTeX Warning: Hyper reference `acro:CPU' on page 36 undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:BTF' on page 37 undefined on input line 6.
 
 
 
-LaTeX Warning: Hyper reference `acro:CPU' on page 36 undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:CPU' on page 37 undefined on input line 7.
 
 
 
-LaTeX Warning: Hyper reference `acro:CU' on page 36 undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:CPU' on page 37 undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:CU' on page 36 undefined on input line 8.
+
+LaTeX Warning: Hyper reference `acro:CU' on page 37 undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:CUDA' on page 36 undefined on input line 9
+LaTeX Warning: Hyper reference `acro:CU' on page 37 undefined on input line 8.
+
+
+LaTeX Warning: Hyper reference `acro:CUDA' on page 37 undefined on input line 9
 .
 
 
-LaTeX Warning: Hyper reference `acro:CUDA' on page 36 undefined on input line 9
+LaTeX Warning: Hyper reference `acro:CUDA' on page 37 undefined on input line 9
 .
 
 
-LaTeX Warning: Hyper reference `acro:FLOPs' on page 36 undefined on input line 
+LaTeX Warning: Hyper reference `acro:FLOPs' on page 37 undefined on input line 
 10.
 
 
-LaTeX Warning: Hyper reference `acro:FLOPs' on page 36 undefined on input line 
+LaTeX Warning: Hyper reference `acro:FLOPs' on page 37 undefined on input line 
 10.
 
 
-LaTeX Warning: Hyper reference `acro:FPU' on page 36 undefined on input line 11
+LaTeX Warning: Hyper reference `acro:FPU' on page 37 undefined on input line 11
 .
 
 
-LaTeX Warning: Hyper reference `acro:FPU' on page 36 undefined on input line 11
+LaTeX Warning: Hyper reference `acro:FPU' on page 37 undefined on input line 11
 .
 
 
-LaTeX Warning: Hyper reference `acro:GPGPU' on page 36 undefined on input line 
+LaTeX Warning: Hyper reference `acro:GPGPU' on page 37 undefined on input line 
 12.
 
 
-LaTeX Warning: Hyper reference `acro:GPGPU' on page 36 undefined on input line 
+LaTeX Warning: Hyper reference `acro:GPGPU' on page 37 undefined on input line 
 12.
 
 
-LaTeX Warning: Hyper reference `acro:GPU' on page 36 undefined on input line 13
+LaTeX Warning: Hyper reference `acro:GPU' on page 37 undefined on input line 13
 .
 
 
-LaTeX Warning: Hyper reference `acro:GPU' on page 36 undefined on input line 13
+LaTeX Warning: Hyper reference `acro:GPU' on page 37 undefined on input line 13
 .
 
 
-LaTeX Warning: Hyper reference `acro:HLOD' on page 36 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:HLOD' on page 37 undefined on input line 1
 4.
 
 
-LaTeX Warning: Hyper reference `acro:HLOD' on page 36 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:HLOD' on page 37 undefined on input line 1
 4.
 
 
-LaTeX Warning: Hyper reference `acro:IFS' on page 36 undefined on input line 15
+LaTeX Warning: Hyper reference `acro:IFS' on page 37 undefined on input line 15
 .
 
 
-LaTeX Warning: Hyper reference `acro:IFS' on page 36 undefined on input line 15
+LaTeX Warning: Hyper reference `acro:IFS' on page 37 undefined on input line 15
 .
 
 
-LaTeX Warning: Hyper reference `acro:LOD' on page 36 undefined on input line 16
+LaTeX Warning: Hyper reference `acro:LOD' on page 37 undefined on input line 16
 .
 
 
-LaTeX Warning: Hyper reference `acro:LOD' on page 36 undefined on input line 16
+LaTeX Warning: Hyper reference `acro:LOD' on page 37 undefined on input line 16
 .
 
 
-LaTeX Warning: Hyper reference `acro:MIMD' on page 36 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:MIMD' on page 37 undefined on input line 1
 7.
 
 
-LaTeX Warning: Hyper reference `acro:MIMD' on page 36 undefined on input line 1
+LaTeX Warning: Hyper reference `acro:MIMD' on page 37 undefined on input line 1
 7.
 
 
-LaTeX Warning: Hyper reference `acro:OpenCL' on page 36 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenCL' on page 37 undefined on input line
  18.
 
 
-LaTeX Warning: Hyper reference `acro:OpenCL' on page 36 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenCL' on page 37 undefined on input line
  18.
 
 
-LaTeX Warning: Hyper reference `acro:OpenGL' on page 36 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenGL' on page 37 undefined on input line
  19.
 
 
-LaTeX Warning: Hyper reference `acro:OpenGL' on page 36 undefined on input line
+LaTeX Warning: Hyper reference `acro:OpenGL' on page 37 undefined on input line
  19.
 
 
-LaTeX Warning: Hyper reference `acro:PCAM' on page 36 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:PCAM' on page 37 undefined on input line 2
 0.
 
 
-LaTeX Warning: Hyper reference `acro:PCAM' on page 36 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:PCAM' on page 37 undefined on input line 2
 0.
 
 
-LaTeX Warning: Hyper reference `acro:PM' on page 36 undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:PM' on page 37 undefined on input line 21.
 
 
 
-LaTeX Warning: Hyper reference `acro:PM' on page 36 undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:PM' on page 37 undefined on input line 21.
 
 
 
-LaTeX Warning: Hyper reference `acro:SFU' on page 36 undefined on input line 22
+LaTeX Warning: Hyper reference `acro:SFU' on page 37 undefined on input line 22
 .
 
 
-LaTeX Warning: Hyper reference `acro:SFU' on page 36 undefined on input line 22
+LaTeX Warning: Hyper reference `acro:SFU' on page 37 undefined on input line 22
 .
 
 
-LaTeX Warning: Hyper reference `acro:SIMD' on page 36 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMD' on page 37 undefined on input line 2
 3.
 
 
-LaTeX Warning: Hyper reference `acro:SIMD' on page 36 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMD' on page 37 undefined on input line 2
 3.
 
 
-LaTeX Warning: Hyper reference `acro:SIMT' on page 36 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMT' on page 37 undefined on input line 2
 4.
 
 
-LaTeX Warning: Hyper reference `acro:SIMT' on page 36 undefined on input line 2
+LaTeX Warning: Hyper reference `acro:SIMT' on page 37 undefined on input line 2
 4.
 
 
-LaTeX Warning: Hyper reference `acro:SLI' on page 36 undefined on input line 25
+LaTeX Warning: Hyper reference `acro:SLI' on page 37 undefined on input line 25
 .
 
 
-LaTeX Warning: Hyper reference `acro:SLI' on page 36 undefined on input line 25
+LaTeX Warning: Hyper reference `acro:SLI' on page 37 undefined on input line 25
 .
 
 
-LaTeX Warning: Hyper reference `acro:SP' on page 36 undefined on input line 26.
+LaTeX Warning: Hyper reference `acro:SP' on page 37 undefined on input line 26.
 
 
 
-LaTeX Warning: Hyper reference `acro:SP' on page 36 undefined on input line 26.
+LaTeX Warning: Hyper reference `acro:SP' on page 37 undefined on input line 26.
 
 
 
-LaTeX Warning: Hyper reference `acro:SM' on page 36 undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:SM' on page 37 undefined on input line 27.
 
 
 
-LaTeX Warning: Hyper reference `acro:SM' on page 36 undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:SM' on page 37 undefined on input line 27.
 
 
 
-LaTeX Warning: Hyper reference `acro:TPC' on page 36 undefined on input line 28
+LaTeX Warning: Hyper reference `acro:TPC' on page 37 undefined on input line 28
 .
 
 
-LaTeX Warning: Hyper reference `acro:TPC' on page 36 undefined on input line 28
+LaTeX Warning: Hyper reference `acro:TPC' on page 37 undefined on input line 28
 .
 
 
-LaTeX Warning: Hyper reference `acro:VBO' on page 36 undefined on input line 29
+LaTeX Warning: Hyper reference `acro:VBO' on page 37 undefined on input line 29
 .
 
 
-LaTeX Warning: Hyper reference `acro:VBO' on page 36 undefined on input line 29
+LaTeX Warning: Hyper reference `acro:VBO' on page 37 undefined on input line 29
 .
 
-) [36
+) [37
 
-] [37] (main.lof)
+] [38] (main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [38
+ [39
 
 ] (main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [39
+ [40
 
-] [40] (main.loa)
+] [41] (main.loa)
 \tf@loa=\write7
 \openout7 = `main.loa'.
 
- [41
+ [42
 
-] [42]
+] [43]
 
 Class scrreprt Warning: \float@listhead detected!
 (scrreprt)              Implementation of \float@listhead became
@@ -1465,7 +1465,7 @@ Class scrreprt Warning: \float@listhead detected!
 \tf@lol=\write8
 \openout8 = `main.lol'.
 
- [43
+ [44
 
 ] (main.aux)
 
@@ -1475,8 +1475,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 19576 strings out of 475389
- 366974 string characters out of 2776529
+ 19577 strings out of 475389
+ 366981 string characters out of 2776529
  966146 words of memory out of 3000000
  40457 multiletter control sequences out of 15000+600000
  477507 words of font info for 58 fonts, out of 8000000 for 9000
@@ -1495,9 +1495,9 @@ b><C:/Users/Matija/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb><C:/Users/Matija/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmti10.pfb><C:/Users/Matija/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (54 pages, 5266737 bytes).
+Output written on main.pdf (55 pages, 5273387 bytes).
 PDF statistics:
- 685 PDF objects out of 1000 (max. 8388607)
- 165 named destinations out of 1000 (max. 500000)
+ 694 PDF objects out of 1000 (max. 8388607)
+ 166 named destinations out of 1000 (max. 500000)
  319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

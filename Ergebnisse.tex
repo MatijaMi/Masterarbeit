@@ -1,8 +1,27 @@
 \chapter{Results and Evaluation}\label{chp:Results}
-In diesem Kapitel sollen die Ergebnisse dieser Diplomarbeit diskutiert werden. 
+
 \section{CAD Runtime Importer and Presenter}
 
-As mentioned 
-\section{Comparison to Related Works}
+As already mentioned, the projects described in Chapter \ref{chp:ObjectLoading} are called CAD Runtime Importer and CAD Runtime Presenter. Both of these project's current release versions and source code of the whole project can for now be found on GitHub \url{https://github.com/MatijaMi/CADRuntime}. Depending on how and if Inosoft wants to use this project, there is a chance of that changing.\\
+The plug-in itself contains all the code needed for opening, parsing and generating CAD models as well as the CRIObject class and the two required materials. In order to use it, the content of the ZIP file needs to be extracted into the plug-ins folder of the project and then the project just needs to be compiled once in order to register it. Once that is done, the CRIObject can be spawned, given the appropriate files and the generating will begin on its own. The plug-in can also easily be extended or adjusted for the concrete case it is being used for. Currently it can be used in Unreal Engine 4 versions 4.23 and higher. Unreal Engine 5 isn't supported but the changes introduced with it shouldn't influence the plug-in much so porting should definitely be possible.\\
+The presenter is a standalone program which can be used to load and interact with runtime generated objects in a multi-user environment. It offers its own file picker, as well as the option of sharing remote files through links. It enables all the interactions described in Chapter \ref{chp:ObjectInteraction}. It has two releases, the desktop and VR version that can be launched through their respective executables. There were ideas of trying to combine these two into one but generally this isn't done. The standard way of doing this is by having two separate versions. The VR version is fully compatible with the Oculus Quest 1 and 2 headsets. Other headsets could be supported through small adjustments but as they weren't available, this could not be achieved. For networking a session based setup using the Steam online subsystem API was used. This means that a user hosts a section, acting as a listen server, while other users can join the session through a session browser. The connection between the users and listen server itself is handled through Steam. This was also tested with a total of four users at the same time and it worked without any major problems. One important feature that was needed in order for this to work is automatic mesh generation on joining a session. As the runtime generated meshes are not part of the level, they also do not get loaded on a new user when they connect to the session. That's why when a new user joins, they automatically download and generate all the existing meshes, including standalone components. All of the meshes are also properly translated, scaled and rotated in order to match the state found on the server. 
+
+\section{Performance and Comparison to Related Works}
+
+All of those features are great but would mean little if the plug-in didn't perform well. In order to evaluate that, it was compared to the two best options currently available, Datasmith Runtime and glTFRuntime. Datasmith Runtime, as mentioned before, is Unreal's official plug-in for CAD runtime importing. It is still quite new, as it was released in August 2021 and is still in beta. On the other hand, glTFRuntime is an unofficial plug-in that has been in development for around two years and focuses purely on the import of glTF files.\\
+In order to truly test these programs it was decided to use a rather large model, containing around 3 million vertices and 6 million faces. Tests with smaller objects were also done but they didn't have enough of an impact on any of the options to create meaningful results. First it was tested how long it took each plug-in to load in the model, in order to compare the speeds of the generating approaches. Then the frame rate of the project was tested to see how well it performed with one of these objects loaded in. This was then also repeated with multiple copies of the same object to see if the way the meshes were generated caused any differences. As a baseline for this, the same tests were done but with the model being added through the editor and placed in the scene before runtime. This way, it can be seen how much of the performance is simply caused by Unreal and how much by the runtime generation. All of these tests were run in the same Unreal project on a computer using a Ryzen 5 1500x processor, RX 470 graphics card and 16 gigabytes of RAM. This is definitely not the strongest machine but that should make it easier to see how well optimized the solutions are. The only difference between the tests is the file format used for them. For CRI an OBJ file was used, while for the rest this OBJ was converted to glTF. The converting was done with multiple programs and the best performing file was chosen. This was done in order to mitigate possible inefficiencies cause by converters. The OBJ and glTF files do contain the same amount of vertices and faces so it shouldn't cause too much of a problem, perhaps only when it comes to parsing the files.
+
+
+%maximum amount of vertices and faces
+% compare between the three
 
 \section{Shortcomings and Possible Improvements}
+%formats
+
+%textures
+
+% time limitations and needed experience , research and experimentation
+
+% dedicated server
+
+% big file handling + variables

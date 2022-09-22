@@ -30,12 +30,12 @@
 \contentsline {subsection}{\numberline {3.3.4}Interacting with Individual Components}{26}{subsection.3.3.4}%
 \contentsline {chapter}{\numberline {4}Results and Evaluation}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}CAD Runtime Importer and Presenter}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Comparison to Related Works}{29}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{29}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusion}{31}{chapter.5}%
-\contentsline {chapter}{Bibliography}{32}{chapter*.17}%
-\contentsline {chapter}{List of Abbreviations}{36}{chapter*.18}%
-\contentsline {chapter}{List of Figures}{38}{chapter*.19}%
-\contentsline {chapter}{List of Tables}{39}{chapter*.20}%
-\contentsline {chapter}{List of Algorithms}{41}{section*.21}%
-\contentsline {chapter}{Listings}{43}{section*.23}%
+\contentsline {section}{\numberline {4.2}Performance and Comparison to Related Works}{30}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{30}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusion}{32}{chapter.5}%
+\contentsline {chapter}{Bibliography}{33}{chapter*.17}%
+\contentsline {chapter}{List of Abbreviations}{37}{chapter*.18}%
+\contentsline {chapter}{List of Figures}{39}{chapter*.19}%
+\contentsline {chapter}{List of Tables}{40}{chapter*.20}%
+\contentsline {chapter}{List of Algorithms}{42}{section*.21}%
+\contentsline {chapter}{Listings}{44}{section*.23}%
