@@ -33,8 +33,8 @@
 \contentsline {section}{\numberline {4.2}Performance and Comparison to Related Works}{30}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{32}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Conclusion}{34}{chapter.5}%
-\contentsline {chapter}{Bibliography}{35}{chapter*.18}%
-\contentsline {chapter}{List of Abbreviations}{39}{chapter*.19}%
-\contentsline {chapter}{List of Figures}{41}{chapter*.20}%
-\contentsline {chapter}{List of Tables}{42}{chapter*.21}%
-\contentsline {chapter}{List of Algorithms}{44}{section*.22}%
+\contentsline {chapter}{Bibliography}{36}{chapter*.18}%
+\contentsline {chapter}{List of Abbreviations}{40}{chapter*.19}%
+\contentsline {chapter}{List of Figures}{42}{chapter*.20}%
+\contentsline {chapter}{List of Tables}{43}{chapter*.21}%
+\contentsline {chapter}{List of Algorithms}{45}{section*.22}%
