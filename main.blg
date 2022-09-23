@@ -5,44 +5,95 @@ Reallocating 'name_of_file' (item size: 1) to 21 items.
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: eg-alpha.bst
 Database file #1: Literaturverzeichnis.bib
-You've used 28 entries,
+Warning--entry type for "bib:InosoftAbout" isn't style-file defined
+--line 8 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:InosoftProject" isn't style-file defined
+--line 15 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:FBXRun" isn't style-file defined
+--line 39 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:UnrealFacts" isn't style-file defined
+--line 53 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:UnrealGames" isn't style-file defined
+--line 60 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:Mando" isn't style-file defined
+--line 66 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:TimSweeney" isn't style-file defined
+--line 75 of file Literaturverzeichnis.bib
+I was expecting a `,' or a `}'---line 79 of file Literaturverzeichnis.bib
+ :  note = {https://developer.nvidia.com/gpugems/gpugems2/copyright}
+ :                                                                  (23.9.2022)},
+I'm skipping whatever remains of this entry
+Warning--entry type for "bib:UEBlueChanges" isn't style-file defined
+--line 153 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:Morrowind" isn't style-file defined
+--line 170 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:MultiThread" isn't style-file defined
+--line 178 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:RunTex" isn't style-file defined
+--line 184 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:ProcProb" isn't style-file defined
+--line 209 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:NetworkComp" isn't style-file defined
+--line 218 of file Literaturverzeichnis.bib
+Warning--entry type for "bib:DeskPlat" isn't style-file defined
+--line 234 of file Literaturverzeichnis.bib
+Warning--I didn't find a database entry for "bib:UENetwoking"
+Warning--I didn't find a database entry for ""
+Warning--empty institution in bib:STL
+Warning--empty year in bib:UEActors
+Warning--empty year in bib:UEBFL
+Warning--empty year in bib:UEBlueprints
+Warning--empty year in bib:UECharacter
+Warning--empty year in bib:UEComponents
+Warning--empty year in bib:UELibC
+Warning--empty year in bib:UEOnlSuS
+Warning--empty year in bib:UEPawn
+Warning--empty year in bib:UEPBR
+Warning--empty year in bib:UEControllers
+Warning--empty year in bib:UEPMC
+Warning--empty year in bib:UEEditors
+Warning--empty year in bib:UECPlus
+Warning--empty institution in bib:glTFRun
+Warning--empty year in bib:RMC
+You've used 35 entries,
             2855 wiz_defined-function locations,
-            816 strings with 9771 characters,
-and the built_in function-call counts, 9714 in all, are:
-= -- 995
-> -- 342
-< -- 22
-+ -- 107
-- -- 105
-* -- 723
-:= -- 1553
-add.period$ -- 67
-call.type$ -- 28
-change.case$ -- 150
-chr.to.int$ -- 28
-cite$ -- 28
-duplicate$ -- 441
-empty$ -- 743
-format.name$ -- 151
-if$ -- 1985
-int.to.chr$ -- 1
+            798 strings with 10096 characters,
+and the built_in function-call counts, 9723 in all, are:
+= -- 971
+> -- 290
+< -- 34
++ -- 89
+- -- 74
+* -- 583
+:= -- 1588
+add.period$ -- 90
+call.type$ -- 35
+change.case$ -- 175
+chr.to.int$ -- 21
+cite$ -- 51
+duplicate$ -- 461
+empty$ -- 767
+format.name$ -- 143
+if$ -- 1932
+int.to.chr$ -- 15
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 155
-num.names$ -- 84
-pop$ -- 130
+missing$ -- 0
+newline$ -- 198
+num.names$ -- 105
+pop$ -- 299
 preamble$ -- 1
-purify$ -- 183
+purify$ -- 211
 quote$ -- 0
-skip$ -- 349
+skip$ -- 308
 stack$ -- 0
-substring$ -- 452
-swap$ -- 94
-text.length$ -- 22
-text.prefix$ -- 19
+substring$ -- 246
+swap$ -- 71
+text.length$ -- 34
+text.prefix$ -- 34
 top$ -- 0
-type$ -- 247
-warning$ -- 0
-while$ -- 89
-width$ -- 32
-write$ -- 369
+type$ -- 315
+warning$ -- 16
+while$ -- 71
+width$ -- 38
+write$ -- 457
+(There was 1 error message)

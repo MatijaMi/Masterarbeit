@@ -19,10 +19,10 @@
 \contentsline {section}{\numberline {3.1}Loading and Parsing CAD Files}{14}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}File Loading and Sharing}{14}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Parsing Wavefront OBJ and STL}{16}{subsection.3.1.2}%
-\contentsline {subsubsection}{\nonumberline Wavefront OBJ}{16}{subsubsection*.12}%
-\contentsline {subsubsection}{\nonumberline STL}{18}{subsubsection*.14}%
+\contentsline {subsubsection}{\nonumberline Wavefront OBJ}{16}{subsubsection*.13}%
+\contentsline {subsubsection}{\nonumberline STL}{18}{subsubsection*.15}%
 \contentsline {section}{\numberline {3.2}Runtime Mesh Generation}{19}{section.3.2}%
-\contentsline {subsubsection}{\nonumberline Generating a CAD Model}{21}{subsubsection*.16}%
+\contentsline {subsubsection}{\nonumberline Generating a CAD Model}{21}{subsubsection*.17}%
 \contentsline {section}{\numberline {3.3}Object Interaction}{24}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Grabbing and Translating}{24}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Scaling and Rotating}{25}{subsection.3.3.2}%
@@ -31,10 +31,10 @@
 \contentsline {chapter}{\numberline {4}Results and Evaluation}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}CAD Runtime Importer and Presenter}{29}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Performance and Comparison to Related Works}{30}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{31}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Shortcomings and Possible Improvements}{32}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Conclusion}{34}{chapter.5}%
-\contentsline {chapter}{Bibliography}{35}{chapter*.17}%
-\contentsline {chapter}{List of Abbreviations}{39}{chapter*.18}%
-\contentsline {chapter}{List of Figures}{41}{chapter*.19}%
-\contentsline {chapter}{List of Tables}{42}{chapter*.20}%
-\contentsline {chapter}{List of Algorithms}{44}{section*.21}%
+\contentsline {chapter}{Bibliography}{35}{chapter*.18}%
+\contentsline {chapter}{List of Abbreviations}{39}{chapter*.19}%
+\contentsline {chapter}{List of Figures}{41}{chapter*.20}%
+\contentsline {chapter}{List of Tables}{42}{chapter*.21}%
+\contentsline {chapter}{List of Algorithms}{44}{section*.22}%
