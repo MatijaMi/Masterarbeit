@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.9)  26 SEP 2022 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.9)  28 SEP 2022 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1340,8 +1340,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--173
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 186--190
-[]\OT1/cmr/m/sc/10.95 Schmidt R.\OT1/cmr/m/n/10.95 :  Pro-ce-du-ral mesh bluepr
-ints in ue4.26,
+[]\OT1/cmr/m/sc/10.95 Schmidt R.\OT1/cmr/m/n/10.95 :  \OT1/cmr/m/it/10.95 Pro-c
+e-du-ral Mesh Blueprints in UE4.26\OT1/cmr/m/n/10.95 ,
  []
 
 
@@ -1351,39 +1351,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--190
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
-[]\OT1/cmr/m/sc/10.95 Sweeney T.\OT1/cmr/m/n/10.95 :  "gpu gems 2 { fore-word, 
-2005.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--207
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
 []\OT1/cmr/m/sc/10.95 TriAxis-Games\OT1/cmr/m/n/10.95 :  \OT1/cmr/m/it/10.95 Ru
 n-time Mesh Com-po-nent\OT1/cmr/m/n/10.95 .  Of-fi-cial doc-u-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--207
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
 \OT1/cmr/m/n/10.95 men-ta-tion, TriAxis-Games.  []$https : / / github . com / T
 riAxis-[]Games /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--214
-[]\OT1/cmr/m/sc/10.95 Walker I.\OT1/cmr/m/n/10.95 :  Mor-rowind com-pletely re-
-booted your xbox
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--214
-\OT1/cmr/m/n/10.95 dur-ing some load-ing screens, 2020.  []$https : / / kotaku 
-. com /
- []
-
-
-Overfull \hbox (38.4058pt too wide) in paragraph at lines 209--214
-\OT1/cmr/m/n/10.95 morrowind-[]completely-[]rebooted-[]your-[]xbox-[]during-[]s
-ome-[]loa-[]1845158550$[](23.09.2022). 
  []
 
 ) [38] [39] (Abkurzungen.tex
@@ -1537,9 +1513,9 @@ s/cm/cmsl10.pfb><C:/Users/Matija/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><C:/Users/Matija/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Matija/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (56 pages, 5336410 bytes).
+Output written on main.pdf (56 pages, 5337243 bytes).
 PDF statistics:
- 877 PDF objects out of 1000 (max. 8388607)
+ 878 PDF objects out of 1000 (max. 8388607)
  165 named destinations out of 1000 (max. 500000)
  311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

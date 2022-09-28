@@ -184,14 +184,15 @@
 
 \bibitem[Sch20]{bib:ProcProb}
 \textsc{Schmidt R.}:
-\newblock Procedural mesh blueprints in ue4.26, 2020.
+\newblock \emph{Procedural Mesh Blueprints in UE4.26}, 2020.
 \newblock
   \url{http://www.gradientspace.com/tutorials/2020/11/11/procedural-mesh-blueprints-in-ue426}(23.09.2022).
 
 \bibitem[Swe05]{bib:TimSweeney}
 \textsc{Sweeney T.}:
-\newblock "gpu gems 2 – foreword, 2005.
-\newblock https://developer.nvidia.com/gpugems/gpugems2/copyright.
+\newblock \emph{"GPU Gems 2 – Foreword}, 2005.
+\newblock
+  \url{https://developer.nvidia.com/gpugems/gpugems2/copyright}(23.9.2022).
 
 \bibitem[Tho22]{bib:VRFields}
 \textsc{Thompson S.}:
@@ -209,8 +210,7 @@
 \textsc{Walker I.}:
 \newblock Morrowind completely rebooted your xbox during some loading screens,
   2020.
-\newblock
-  \url{https://kotaku.com/morrowind-completely-rebooted-your-xbox-during-some-loa-1845158550}(23.09.2022).
+\newblock \url{https://kotaku.com/1845158550}(23.09.2022).
 
 \bibitem[{Wav}92]{bib:OBJ}
 \textsc{{Wavefront Technologies}}:
